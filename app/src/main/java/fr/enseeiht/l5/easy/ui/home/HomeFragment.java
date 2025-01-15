@@ -1,9 +1,12 @@
 package fr.enseeiht.l5.easy.ui.home;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,7 +35,14 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+
+                SharedPreferences sharedPref = getActivity().getSharedPreferences(getString(R.string.sharedPrefName), Context.MODE_PRIVATE);
+
+                if(sharedPref.getString(getString(R.string.deviceId), null) == null){
+                    textView.setText(R.string.homeTextNull);
+                } else {
+                    textView.setText(s);
+                }
             }
         });
         return root;

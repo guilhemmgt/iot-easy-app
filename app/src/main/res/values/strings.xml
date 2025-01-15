@@ -2,12 +2,31 @@
     <string name="app_name">EASY</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">EASY</string>
+    <string name="nav_header_subtitle">easyarduino071@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="tokenTextName">Token</string>
+    <string name="textViewToken">Token :</string>
+    <string name="menu_connect">Connect</string>
+    <string name="menu_Authenticate">Authenticate</string>
+    <string name="needAuthentication">need_authentication</string>
+    <string name="sharedPrefName">master</string>
+    <string name="policeTextValue">If something seems strange, call the police :</string>
+    <string name="policeButtonText">Call The Police</string>
+    <string name="authenticateButtonTextContent">Have you tried to get home ?</string>
+    <string name="authenticateButtonContent">AUTHENTICATE</string>
+    <string name="authenticationTextNoNeed">Everything seems fine</string>
+    <string name="authenticationTextNeed">We need your authententication</string>
+    <string name="connecttextValue">Insert Id of the EASY device you want to connect to :</string>
+    <string name="idConnectText">Id of the device</string>
+    <string name="connectButtonText">Connect</string>
+    <string name="connectedTextValue">You are connected to the device :</string>
+    <string name="connectedIdDefault">None</string>
+    <string name="deviceId">DeviceId</string>
+    <string name="homeTextNull">No devices connected</string>
 </resources>
