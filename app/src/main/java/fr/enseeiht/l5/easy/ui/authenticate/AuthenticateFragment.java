@@ -36,13 +36,10 @@ import fr.enseeiht.l5.easy.databinding.FragmentAuthenticateBinding;
 /*CHOCOLAT*/
 public class AuthenticateFragment extends Fragment {
 
-    private AuthenticateViewModel authenticateViewModel;
     private FragmentAuthenticateBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        authenticateViewModel =
-                new ViewModelProvider(this).get(AuthenticateViewModel.class);
 
         binding = FragmentAuthenticateBinding.inflate(inflater, container, false);
         View root = binding.getRoot();

@@ -36,13 +36,10 @@ import okhttp3.Response;
 
 public class ConnectFragment extends Fragment {
 
-    private ConnectViewModel connectViewModel;
     private FragmentConnectBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        connectViewModel =
-                new ViewModelProvider(this).get(ConnectViewModel.class);
 
         binding = FragmentConnectBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
