@@ -21,7 +21,7 @@
     <string name="authenticateButtonTextContent">Have you tried to get home ?</string>
     <string name="authenticateButtonContent">AUTHENTICATE</string>
     <string name="authenticationTextNoNeed">Everything seems fine</string>
-    <string name="authenticationTextNeed">We need your authententication</string>
+    <string name="authenticationTextNeed">We need your authentication</string>
     <string name="connecttextValue">Insert Id of the EASY device you want to connect to :</string>
     <string name="idConnectText">Id of the device</string>
     <string name="connectButtonText">Connect</string>

@@ -45,6 +45,7 @@ public class ConnectFragment extends Fragment {
         View root = binding.getRoot();
 
         final EditText tokenEditText = binding.tokenText;
+        tokenEditText.setKeyListener(null);
 
         // Set token to the TextField to a manual access
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(Objects.requireNonNull(getActivity()), new OnSuccessListener<InstanceIdResult>() {
@@ -57,6 +58,11 @@ public class ConnectFragment extends Fragment {
         // button to send token associated to the device id
         final EditText idEditText = binding.idConnectField;
         final TextView idConnectedText = binding.connectedIdText;
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(getString(R.string.sharedPrefName), Context.MODE_PRIVATE);
+
+        if(sharedPref.getString(getString(R.string.deviceId), null) != null)
+            idConnectedText.setText(sharedPref.getString(getString(R.string.deviceId), null));
+
         Button connectButton = binding.connectButton;
         connectButton.setOnClickListener(view -> FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(Objects.requireNonNull(getActivity()), instanceIdResult ->{
             new SendId().execute(idEditText.getText().toString(), instanceIdResult.getToken());
